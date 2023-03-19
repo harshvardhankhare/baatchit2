@@ -84,7 +84,7 @@ const Form: React.FC<FormProps> = ({ placeholder, isComment, postId }) => {
                 transition"
             />
             <div className="mt-4 flex flex-row justify-end">
-              <Button disabled={isLoading || !body} onClick={onSubmit} label="Tweet" />
+              <Button disabled={isLoading || !body} onclick={onSubmit} label="Tweet" />
             </div>
           </div>
         </div>
@@ -92,8 +92,8 @@ const Form: React.FC<FormProps> = ({ placeholder, isComment, postId }) => {
         <div className="py-8">
           <h1 className="text-white text-2xl text-center mb-4 font-bold">Welcome to Baatchit</h1>
           <div className="flex flex-row items-center justify-center gap-4">
-            <Button label="Login" onClick={loginModal.onOpen} />
-            <Button label="Register" onClick={registerModal.onOpen} secondary />
+            <Button label="Login" onclick={loginModal.onOpen} />
+            <Button label="Register" onclick={registerModal.onOpen} secondary />
           </div>
         </div>
       )}

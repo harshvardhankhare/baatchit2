@@ -27,7 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       throw new Error('Invalid ID');
     }
 
-    let updatedLikedIds = [...(post.likedIds || [])];
+    let updatedLikedIds = [...(post.LikedIds || [])];
 
     if (req.method === 'POST') {
       updatedLikedIds.push(currentUser.id);
@@ -53,7 +53,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
               id: post.userId
             },
             data: {
-              hasNotification: true
+              hasNotifications: true
             }
           });
         }
@@ -72,7 +72,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         id: postId
       },
       data: {
-        likedIds: updatedLikedIds
+        LikedIds: updatedLikedIds
       }
     });
 
